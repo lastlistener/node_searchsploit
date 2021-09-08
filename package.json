@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "description": "Searchsploit is a tool used in security audits which enables the user to search a local copy of exploit-db.com and identify public exploits which can be used against specific software packages. node_searchsploit provides a simple NodeJS interface that allows NodeJS programmers to easily execute searchsploit and handle the output.",
   "author": "lastlistener (lastlistener.github.io/About.html)",
-  "homepage": "https://github.com/lastlistener/node_searchsploit"
+  "homepage": "https://github.com/lastlistener/node_searchsploit",
+  "main": "node_searchsploit.js"
 }
