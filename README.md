@@ -5,10 +5,12 @@ A simple NodeJS wrapper/interface for the command-line utility "SearchSploit."
 
 **node_searchsploit** provides a simple NodeJS interface that wraps the searchsploit command-line utility and allows NodeJS programmers to easily execute searchsploit and handle the output within NodeJS.
 
+For example, the following code is a simple usage showing the NodeJS equivalent of executing "searchsploit --json tomcat".
+
 ```javascript
 var Searchsploit = require('node_searchsploit');
-Searchsploit('tomcat 7').then(function(result) {
-  console.log(result.json.RESULTS_EXPLOIT)
+Searchsploit('tomcat').then(function(result) {
+  console.log(result.json.RESULTS_EXPLOIT);
 })
 ```
 ```
@@ -33,4 +35,12 @@ Searchsploit('tomcat 7').then(function(result) {
   },
   ...
  ]
+```
+
+Alternatively, you can pass searchsploit command line flags to the module as an array; for example, this shows a programmer utilizing the -s (strict) search parameter of searchsploit.
+
+```javascript
+Searchsploit(['-s', 'Wordpress Core']).then(function(data) {
+	console.log(data.json.RESULTS_EXPLOIT)
+})
 ```
