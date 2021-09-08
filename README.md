@@ -41,6 +41,6 @@ Alternatively, you can pass searchsploit command line flags to the module as an 
 
 ```javascript
 Searchsploit(['-s', 'Wordpress Core']).then(function(data) {
-	console.log(data.json.RESULTS_EXPLOIT)
+	console.log(data.json.RESULTS_EXPLOIT);
 })
 ```
